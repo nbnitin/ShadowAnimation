@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BeautifulLaunchScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgu-NO-Gim">
+                                <rect key="frame" x="87.666666666666686" y="398.66666666666669" width="215" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" name="margless"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="background"/>
+                        <constraints>
+                            <constraint firstItem="bgu-NO-Gim" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="7AB-3o-OjL"/>
+                            <constraint firstItem="bgu-NO-Gim" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ILm-Nt-M8R"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblWelcomeText" destination="bgu-NO-Gim" id="pBg-8L-Slc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58" y="-2"/>
+        </scene>
+        <!--Practice View Controller-->
+        <scene sceneID="GNF-7H-4Dz">
+            <objects>
+                <viewController id="dMA-z7-RwJ" customClass="PracticeViewController" customModule="BeautifulLaunchScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z45-fh-5zm">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5Y-Hz-wZV">
+                                <rect key="frame" x="114" y="380.66666666666669" width="162" height="95.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="80"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oq3-2e-W0e">
+                                <rect key="frame" x="145" y="386.33333333333331" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oq3-2e-W0e" secondAttribute="height" id="22r-4s-tkT"/>
+                                    <constraint firstAttribute="width" constant="100" id="ZHl-N7-fCr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="V4Y-iR-gqy"/>
+                        <color key="backgroundColor" name="margless"/>
+                        <constraints>
+                            <constraint firstItem="oq3-2e-W0e" firstAttribute="centerX" secondItem="V4Y-iR-gqy" secondAttribute="centerX" id="LLT-9Z-BNq"/>
+                            <constraint firstItem="W5Y-Hz-wZV" firstAttribute="centerY" secondItem="V4Y-iR-gqy" secondAttribute="centerY" id="SlD-hs-aQP"/>
+                            <constraint firstItem="oq3-2e-W0e" firstAttribute="top" secondItem="W5Y-Hz-wZV" secondAttribute="bottom" constant="-90" id="Xp9-vi-odO"/>
+                            <constraint firstItem="W5Y-Hz-wZV" firstAttribute="centerX" secondItem="V4Y-iR-gqy" secondAttribute="centerX" id="jHm-iG-xIC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblText" destination="W5Y-Hz-wZV" id="kJg-Qc-MUh"/>
+                        <outlet property="roundedVV" destination="oq3-2e-W0e" id="T0h-8C-oSv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xnz-kz-avV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="815" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="background">
+            <color red="0.2070000022649765" green="0.54500001668930054" blue="0.64999997615814209" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="margless">
+            <color red="0.22200000286102295" green="0.65799999237060547" blue="0.79600000381469727" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
