@@ -76,3 +76,78 @@ So, right now our imaginary triangle in our imaginary circle (wow, that’s a lo
 
 
 Depending on how you want to move the shadow around, I suggest you create as many points around the circle as possible, to avoid the animation taking sharp turns and the motion looking less circular. What worked for me was to add a point for every 22.5°, so I’d have four points in the first quarter of the circle (degree 22.5, 45, 67.5, 90) and two on the other, because I made my animation stop at degree 135.
+
+
+#Expalantion of trignometery function
+
+Basically, in a right-angled triangle, you can calculate the length of the sides of your triangle provided that you have at least:
+- the degrees of one angle (in our case, the one I highlighted in yellow),
+- and the size of one of the three sides (in our case, blue dotted line).
+As you can tell from the picture, this logic can be applied to an invisible circle around our middle button to define the position of the three buttons (green) by calculating x and y values with the formulas in the picture.
+![image](https://user-images.githubusercontent.com/5785670/195842433-8637a63f-6c92-4887-b28b-f7230529be0d.png)
+
+
+
+This theory can be useful for any architecture involving circles. In that tutorial, for example, I was explaining how to determine the position of the green dots in the picture using the centre of the circle as the starting point, so that I could use them as the centre of the position of three UIButtons.
+
+Trigonometry teaches that:
+
+sin θ = Opposite / Hypotenuse
+cos θ = Adjacent / Hypotenuse
+tan θ = Opposite / Adjacent Side
+If you look at the picture above, “θ” would be the yellow angle, “x” would be the adjacent side and “y” would be the opposite, which makes the remaining side, the radius if you will, the hypotenuse.
+
+Assuming that we already know the degrees of our angle and at least one of the three sides, usually the hypotenuse, we can invert the formulas to find the sides of the remaining sides, usually x and y.
+
+All we need to do is invert our formulas:
+
+y = sin θ * h
+
+y = tan θ * x
+
+x = cos θ * h
+
+x = y / tan θ
+
+h = x / cos θ
+
+h = y / sin θ
+
+And replace θ with our degrees in radians, using the following formula:
+
+θ * π / 180
+
+
+creating segment enum
+enum segment {
+case x
+case y
+case h
+}
+
+above formula in swift
+y = tan(angle * .pi/180) * x
+y = sin(angle * .pi/180) * h
+x = cos(angle * .pi/180) * h
+x = y / tan(angle * .pi/180)
+h = x / cos(angle * .pi/180)
+h = y / sin(angle * .pi/180)
+
+The parameters I would send to the function are:
+
+segment, where I define whether the segment I have is x, y or h;
+size, where I declare how long the given segment is;
+angle, which is the degrees of my angle.
+The function will return [segment : CGFloat].
+
+Using a switch statement, I can define which formulas to use:
+
+switch segment {
+   case .x: (...)
+   case .y: (...)
+   case .h: (...)
+}
+
+
+
+
