@@ -1,5 +1,12 @@
 # ShadowAnimation
 
+
+
+https://user-images.githubusercontent.com/5785670/195842962-459b8e09-9719-49e5-be53-e9e21e44d347.mp4
+
+
+
+
 lblWelcomeText.layer.shadowOffset = CGSize(width: 10, height: 0)
 
 Replace // add shadow offset here with your shadow offset. In this example, we want our shadow to be completely on the right, so I will set its x value to 10 and its y value to 0 like so:
@@ -78,7 +85,7 @@ So, right now our imaginary triangle in our imaginary circle (wow, that’s a lo
 Depending on how you want to move the shadow around, I suggest you create as many points around the circle as possible, to avoid the animation taking sharp turns and the motion looking less circular. What worked for me was to add a point for every 22.5°, so I’d have four points in the first quarter of the circle (degree 22.5, 45, 67.5, 90) and two on the other, because I made my animation stop at degree 135.
 
 
-#Expalantion of trignometery function
+# Expalantion of trignometery function
 
 Basically, in a right-angled triangle, you can calculate the length of the sides of your triangle provided that you have at least:
 - the degrees of one angle (in our case, the one I highlighted in yellow),
